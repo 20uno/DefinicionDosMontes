@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Metodología – Definición de Producto | Dos Montes, Villahermosa</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <style>
+    :root{
+      --bg1:#fff7ed;   /* crema arena */
+      --bg2:#f1f5ec;   /* verde muy claro */
+      --ink:#1f2937;   /* gris-azul oscuro */
+      --muted:#6b7280; /* gris medio */
+      --earth:#b45309; /* terracota suave */
+      --leaf:#16a34a;  /* verde hoja */
+      --olive:#6b8e23; /* oliva */
+      --clay:#d97706;  /* arcilla */
+      --sky:#10b981;   /* verde-agua */
+      --card:#fffbf5;
+      --ring: rgba(22,163,74,.25);
+    }
+    .soft-card{ background:linear-gradient(180deg,var(--card),#fff); border:1px solid #f1e8db; box-shadow:0 12px 30px rgba(36,24,0,.08); }
+    .slide-enter{ animation: fadeIn .35s ease both, rise .5s ease both; }
+    @keyframes fadeIn{ from{opacity:0} to{opacity:1} }
+    @keyframes rise{ from{ transform:translateY(8px) } to{ transform:translateY(0)} }
+    .pill{ background: #f2efe7; border:1px solid #eadfcc; }
+    .nav-active{ background: rgba(22,163,74,.12); border-color: rgba(22,163,74,.35); color:#065f46 }
+  </style>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-[var(--bg1)] via-white to-[var(--bg2)] text-[var(--ink)]">
+
+  <!-- TOP NAV -->
+  <header class="sticky top-0 z-40 backdrop-blur supports-backdrop-blur:bg-white/60 bg-white/70 border-b border-amber-100">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex items-center gap-3 justify-between">
+      <div class="flex items-center gap-3">
+        <i class="ph ph-plant text-2xl text-[var(--leaf)]"></i>
+        <span class="font-semibold">Metodología – Dos Montes, Villahermosa</span>
+        <span class="text-xs text-[var(--muted)] hidden sm:inline">presentación interactiva</span>
+      </div>
+      <div class="hidden md:flex items-center gap-2">
+        <button class="nav-btn pill px-3 py-2 rounded-xl border text-sm" data-target="0">Portada</button>
+        <button class="nav-btn pill px-3 py-2 rounded-xl border text-sm" data-target="1">F1</button>
+        <button class="nav-btn pill px-3 py-2 rounded-xl border text-sm" data-target="2">F2</button>
+        <button class="nav-btn pill px-3 py-2 rounded-xl border text-sm" data-target="3">F3</button>
+        <button class="nav-btn pill px-3 py-2 rounded-xl border text-sm" data-target="4">F4</button>
+        <button class="nav-btn pill px-3 py-2 rounded-xl border text-sm" data-target="5">F5</button>
+        <button class="nav-btn pill px-3 py-2 rounded-xl border text-sm" data-target="6">F6</button>
+        <button class="nav-btn pill px-3 py-2 rounded-xl border text-sm" data-target="7">F7</button>
+      </div>
+      <div class="flex items-center gap-2">
+        <button id="dl" class="px-3 py-2 rounded-xl border pill text-sm hover:ring-2 hover:ring-[var(--ring)]"><i class="ph ph-download-simple mr-2"></i>Descargar HTML</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- SLIDES WRAPPER -->
+  <main class="max-w-6xl mx-auto px-4 py-8">
+    <div id="deck" class="relative">
+
+      <!-- SLIDE 0: PORTADA -->
+      <section class="slide slide-enter" data-slide="0">
+        <div class="soft-card rounded-3xl p-8 md:p-12">
+          <div class="flex flex-col md:flex-row gap-8 items-center">
+            <div class="flex-1">
+              <h1 class="text-3xl md:text-5xl font-extrabold leading-tight mb-4">
+                Definición de Producto Inmobiliario
+                <span class="block text-[var(--earth)]">Caso: Dos Montes, Villahermosa</span>
+              </h1>
+              <p class="text-lg text-[var(--muted)] max-w-2xl">Presentación para equipos técnicos, inversionistas, comunidad y autoridades. Enfoque terroso, orgánico y ligero. Información clave por fases y navegación interactiva.</p>
+              <div class="mt-6 flex flex-wrap gap-2">
+                <span class="pill px-3 py-1 rounded-full text-sm">Naturaleza & turismo</span>
+                <span class="pill px-3 py-1 rounded-full text-sm">Conectividad estratégica</span>
+                <span class="pill px-3 py-1 rounded-full text-sm">Sustentabilidad práctica</span>
+              </div>
+            </div>
+            <div class="flex-1 grid grid-cols-2 sm:grid-cols-3 gap-3 w-full">
+              <!-- botones de salto -->
+              <button class="goto soft-card rounded-2xl p-4 hover:shadow-xl transition" data-target="1">
+                <i class="ph ph-map-trifold text-3xl text-[var(--leaf)]"></i>
+                <div class="font-semibold mt-2">Fase 1</div>
+                <div class="text-sm text-[var(--muted)]">Territorio</div>
+              </button>
+              <button class="goto soft-card rounded-2xl p-4 hover:shadow-xl transition" data-target="2">
+                <i class="ph ph-scales text-3xl text-[var(--clay)]"></i>
+                <div class="font-semibold mt-2">Fase 2</div>
+                <div class="text-sm text-[var(--muted)]">Normativa</div>
+              </button>
+              <button class="goto soft-card rounded-2xl p-4 hover:shadow-xl transition" data-target="3">
+                <i class="ph ph-users-three text-3xl text-emerald-600"></i>
+                <div class="font-semibold mt-2">Fase 3</div>
+                <div class="text-sm text-[var(--muted)]">Socioeconómico</div>
+              </button>
+              <button class="goto soft-card rounded-2xl p-4 hover:shadow-xl transition" data-target="4">
+                <i class="ph ph-lightbulb text-3xl text-amber-500"></i>
+                <div class="font-semibold mt-2">Fase 4</div>
+                <div class="text-sm text-[var(--muted)]">Hipótesis</div>
+              </button>
+              <button class="goto soft-card rounded-2xl p-4 hover:shadow-xl transition" data-target="5">
+                <i class="ph ph-currency-circle-dollar text-3xl text-lime-600"></i>
+                <div class="font-semibold mt-2">Fase 5</div>
+                <div class="text-sm text-[var(--muted)]">Viabilidad</div>
+              </button>
+              <button class="goto soft-card rounded-2xl p-4 hover:shadow-xl transition" data-target="6">
+                <i class="ph ph-paint-brush text-3xl text-sky-600"></i>
+                <div class="font-semibold mt-2">Fase 6</div>
+                <div class="text-sm text-[var(--muted)]">Diseño</div>
+              </button>
+              <button class="goto soft-card rounded-2xl p-4 hover:shadow-xl transition col-span-2 sm:col-span-1" data-target="7">
+                <i class="ph ph-check-circle text-3xl text-green-700"></i>
+                <div class="font-semibold mt-2">Fase 7</div>
+                <div class="text-sm text-[var(--muted)]">Validación</div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 1: TERRITORIO -->
+      <section class="slide hidden" data-slide="1">
+        <div class="soft-card rounded-3xl p-8 md:p-12 slide-enter">
+          <div class="flex items-start gap-4 mb-6">
+            <i class="ph ph-map-trifold text-4xl text-[var(--leaf)]"></i>
+            <h2 class="text-2xl md:text-4xl font-extrabold">Fase 1 – Análisis del Territorio</h2>
+          </div>
+          <p class="text-[var(--muted)] max-w-3xl">Dos Montes se localiza al sureste de Villahermosa, con acceso por la carretera Villahermosa–Macuspana. Contexto periurbano con vegetación abundante y vocación agro‑turística. Referentes cercanos: Aeropuerto Internacional de Villahermosa, Área Interpretativa Yumká, Universidad Olmeca, parques industriales y zona centro a ~13 min.</p>
+          <div class="grid md:grid-cols-2 gap-6 mt-6">
+            <div class="p-5 rounded-2xl border border-amber-100 bg-white/60">
+              <div class="font-semibold mb-2">Claves territoriales</div>
+              <ul class="list-disc ml-5 space-y-2 text-[var(--ink)]">
+                <li>Planicie tropical con lluvias intensas → priorizar gestión pluvial (infiltración, retención, pendientes suaves).</li>
+                <li>Vegetación nativa y suelos fértiles → paisajismo con especies locales de bajo mantenimiento.</li>
+                <li>Conectividad estratégica sin saturación urbana → perfil ideal para lotes amplios y ritmo de vida campestre.</li>
+              </ul>
+            </div>
+            <div class="p-5 rounded-2xl border border-amber-100 bg-white/60">
+              <div class="font-semibold mb-2">Riesgos & condicionantes</div>
+              <ul class="list-disc ml-5 space-y-2">
+                <li>Vulnerabilidad a encharcamientos/inundación en temporada de lluvias.</li>
+                <li>Posibles limitantes por servidumbres o cuerpos de agua cercanos.</li>
+                <li>Distancias a servicios urbanos que exigen planeación eficiente.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="mt-6 flex flex-wrap gap-2">
+            <span class="pill px-3 py-1 rounded-full text-sm">Coordenadas de referencia: 18.009571, -92.818508</span>
+            <span class="pill px-3 py-1 rounded-full text-sm">Acceso a aeropuerto y Yumká</span>
+          </div>
+          <div class="mt-8 flex justify-between">
+            <button class="back pill px-4 py-2 rounded-xl border"><i class="ph ph-arrow-left"></i> Portada</button>
+            <button class="next pill px-4 py-2 rounded-xl border" data-next="2">Siguiente <i class="ph ph-arrow-right"></i></button>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 2: NORMATIVA -->
+      <section class="slide hidden" data-slide="2">
+        <div class="soft-card rounded-3xl p-8 md:p-12 slide-enter">
+          <div class="flex items-start gap-4 mb-6">
+            <i class="ph ph-scales text-4xl text-[var(--clay)]"></i>
+            <h2 class="text-2xl md:text-4xl font-extrabold">Fase 2 – Normativa & Regulación</h2>
+          </div>
+          <p class="text-[var(--muted)] max-w-3xl">Revisión de instrumentos de planeación (IMPLAN/PMDU de Centro, Tabasco) y compatibilidad de uso de suelo para desarrollos campestres de baja densidad. Considerar servidumbres, zonas de conservación, lineamientos ambientales y requisitos de factibilidad.</p>
+          <div class="grid md:grid-cols-3 gap-6 mt-6">
+            <div class="p-5 rounded-2xl border border-amber-100 bg-white/60">
+              <div class="font-semibold mb-2">Qué confirmar</div>
+              <ul class="list-disc ml-5 space-y-2">
+                <li>Uso de suelo compatible con lotes amplios y vivienda unifamiliar.</li>
+                <li>Restricciones por cuerpos de agua/humedales y áreas verdes obligatorias.</li>
+                <li>Normas de imagen urbana, vialidades y luminarias (altura, eficiencia).</li>
+              </ul>
+            </div>
+            <div class="p-5 rounded-2xl border border-amber-100 bg-white/60">
+              <div class="font-semibold mb-2">Gestión requerida</div>
+              <ul class="list-disc ml-5 space-y-2">
+                <li>Factibilidad de agua y energía.</li>
+                <li>Estudios hidrológicos y de impacto mínimo.</li>
+                <li>Permisos municipales y estatales aplicables.</li>
+              </ul>
+            </div>
+            <div class="p-5 rounded-2xl border border-amber-100 bg-white/60">
+              <div class="font-semibold mb-2">Principios guía</div>
+              <ul class="list-disc ml-5 space-y-2">
+                <li>Baja densidad con respeto ambiental.</li>
+                <li>Infraestructura azul‑verde (pluvial y paisaje).</li>
+                <li>Seguridad jurídica y claridad para compradores.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="mt-8 flex justify-between">
+            <button class="prev pill px-4 py-2 rounded-xl border" data-prev="1"><i class="ph ph-arrow-left"></i> Anterior</button>
+            <button class="next pill px-4 py-2 rounded-xl border" data-next="3">Siguiente <i class="ph ph-arrow-right"></i></button>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 3: SOCIOECONÓMICO / CONTEXTO -->
+      <section class="slide hidden" data-slide="3">
+        <div class="soft-card rounded-3xl p-8 md:p-12 slide-enter">
+          <div class="flex items-start gap-4 mb-6">
+            <i class="ph ph-users-three text-4xl text-emerald-600"></i>
+            <h2 class="text-2xl md:text-4xl font-extrabold">Fase 3 – Contexto Socioeconómico & Entorno</h2>
+          </div>
+          <p class="text-[var(--muted)] max-w-3xl">Perfiles interesados: familias locales y foráneas que buscan amplitud, naturaleza y conexión razonable con la ciudad; proyectos con vocación turística (hospedaje rural, retiros, wellness). Motivos de elección: privacidad, jardín propio, clima cálido, cercanía a aeropuerto/Yumká y accesos cómodos.</p>
+          <div class="grid md:grid-cols-2 gap-6 mt-6">
+            <div class="p-5 rounded-2xl border border-amber-100 bg-white/60">
+              <div class="font-semibold mb-2">Hallazgos</div>
+              <ul class="list-disc ml-5 space-y-2">
+                <li>Oferta convencional predominante; escasez de productos campestres contemporáneos.</li>
+                <li>Turismo de naturaleza como complemento (no sustituto) de vivienda.</li>
+                <li>Preferencia por viviendas de 1 nivel y lotes grandes para uso flexible.</li>
+              </ul>
+            </div>
+            <div class="p-5 rounded-2xl border border-amber-100 bg-white/60">
+              <div class="font-semibold mb-2">Implicaciones</div>
+              <ul class="list-disc ml-5 space-y-2">
+                <li>Diferenciación por diseño bioclimático y paisajismo nativo.</li>
+                <li>Comunicación clara de accesos y tiempos reales de traslado.</li>
+                <li>Énfasis en sustentabilidad práctica y mantenimiento sencillo.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="mt-8 flex justify-between">
+            <button class="prev pill px-4 py-2 rounded-xl border" data-prev="2"><i class="ph ph-arrow-left"></i> Anterior</button>
+            <button class="next pill px-4 py-2 rounded-xl border" data-next="4">Siguiente <i class="ph ph-arrow-right"></i></button>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 4: HIPÓTESIS DE PRODUCTO -->
+      <section class="slide hidden" data-slide="4">
+        <div class="soft-card rounded-3xl p-8 md:p-12 slide-enter">
+          <div class="flex items-start gap-4 mb-6">
+            <i class="ph ph-lightbulb text-4xl text-amber-500"></i>
+            <h2 class="text-2xl md:text-4xl font-extrabold">Fase 4 – Hipótesis de Producto</h2>
+          </div>
+          <p class="text-[var(--muted)] max-w-3xl">Producto campestre contemporáneo: lotes amplios y viviendas de una planta, multigeneracionales, con arquitectura cálida tipo quinta y toques modernos. Enfoque bioclimático, ventilación cruzada y sombra de árboles protagónicos (p. ej. almendros).</p>
+          <div class="grid md:grid-cols-3 gap-6 mt-6">
+            <div class="p-5 rounded-2xl border border-amber-100 bg-white/60">
+              <div class="font-semibold mb-2">Lotes</div>
+              <ul class="list-disc ml-5 space-y-2">
+                <li>Rango referencial: 1,700–2,300 m² (ajustable por normativa/viabilidad).</li>
+                <li>Orientación para asoleamiento y vientos predominantes.</li>
+                <li>Reservas verdes y drenaje superficial integrado al paisaje.</li>
+              </ul>
+            </div>
+            <div class="p-5 rounded-2xl border border-amber-100 bg-white/60">
+              <div class="font-semibold mb-2">Vivienda tipo</div>
+              <ul class="list-disc ml-5 space-y-2">
+                <li>1 nivel, 3 recámaras flexibles, espacios integrados interior‑exterior.</li>
+                <li>Materiales naturales (madera tratada, piedra, teja/laminado térmico).</li>
+                <li>Iluminación cálida, arcos u otros acentos locales contemporáneos.</li>
+              </ul>
+            </div>
+            <div class="p-5 rounded-2xl border border-amber-100 bg-white/60">
+              <div class="font-semibold mb-2">Sustentabilidad</div>
+              <ul class="list-disc ml-5 space-y-2">
+                <li>Captación pluvial, compostaje, separación de residuos.</li>
+                <li>Pavimentos permeables y láminas de retardo.</li>
+                <li>Vegetación nativa y estanques/zanjas de infiltración.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="mt-8 flex justify-between">
+            <button class="prev pill px-4 py-2 rounded-xl border" data-prev="3"><i class="ph ph-arrow-left"></i> Anterior</button>
+            <button class="next pill px-4 py-2 rounded-xl border" data-next="5">Siguiente <i class="ph ph-arrow-right"></i></button>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 5: VIABILIDAD -->
+      <section class="slide hidden" data-slide="5">
+        <div class="soft-card rounded-3xl p-8 md:p-12 slide-enter">
+          <div class="flex items-start gap-4 mb-6">
+            <i class="ph ph-currency-circle-dollar text-4xl text-lime-700"></i>
+            <h2 class="text-2xl md:text-4xl font-extrabold">Fase 5 – Viabilidad Técnica y Económica</h2>
+          </div>
+          <p class="text-[var(--muted)] max-w-3xl">Validación preliminar de costos, ingresos y riesgos. Enfoque en infraestructura básica de bajo costo operativo y mantenimiento sencillo, con plus en paisajismo y soluciones pluviales.</p>
+          <div class="grid md:grid-cols-3 gap-6 mt-6">
+            <div class="p-5 rounded-2xl border border-amber-100 bg-white/60">
+              <div class="font-semibold mb-2">Técnica</div>
+              <ul class="list-disc ml-5 space-y-2">
+                <li>Topografía y mecánica de suelos para cimentaciones eficientes.</li>
+                <li>Redes: agua/energía (factibilidades) y tratamiento de aguas.</li>
+                <li>Pluvial: cunetas verdes, zanjas de infiltración, humedales secos.</li>
+              </ul>
+            </div>
+            <div class="p-5 rounded-2xl border border-amber-100 bg-white/60">
+              <div class="font-semibold mb-2">Económica</div>
+              <ul class="list-disc ml-5 space-y-2">
+                <li>Capex acotado en urbanización simple y paisaje.</li>
+                <li>Modelo comercial gradual (etapas) para mitigar riesgo.</li>
+                <li>Opciones de financiamiento a comprador final.</li>
+              </ul>
+            </div>
+            <div class="p-5 rounded-2xl border border-amber-100 bg-white/60">
+              <div class="font-semibold mb-2">Riesgos & mitigación</div>
+              <ul class="list-disc ml-5 space-y-2">
+                <li>Inundación → sobrediseño pluvial y cotas mínimas.</li>
+                <li>Trámites → gestión temprana con autoridades.</li>
+                <li>Mercado → prototipos flexibles y etapas pequeñas.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="mt-8 flex justify-between">
+            <button class="prev pill px-4 py-2 rounded-xl border" data-prev="4"><i class="ph ph-arrow-left"></i> Anterior</button>
+            <button class="next pill px-4 py-2 rounded-xl border" data-next="6">Siguiente <i class="ph ph-arrow-right"></i></button>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 6: DISEÑO CONCEPTUAL -->
+      <section class="slide hidden" data-slide="6">
+        <div class="soft-card rounded-3xl p-8 md:p-12 slide-enter">
+          <div class="flex items-start gap-4 mb-6">
+            <i class="ph ph-paint-brush text-4xl text-sky-700"></i>
+            <h2 class="text-2xl md:text-4xl font-extrabold">Fase 6 – Diseño Conceptual</h2>
+          </div>
+          <p class="text-[var(--muted)] max-w-3xl">Lineamientos de imagen y experiencia: arquitectura acogedora tipo quinta con toques contemporáneos; relación interior‑exterior (porches, arcos, terrazas); iluminación cálida y paisajismo orgánico. Vialidades de baja altura visual (sin postes altos), señalética campestre y luz a nivel peatonal.</p>
+          <div class="grid md:grid-cols-2 gap-6 mt-6">
+            <div class="p-5 rounded-2xl border border-amber-100 bg-white/60">
+              <div class="font-semibold mb-2">Componentes</div>
+              <ul class="list-disc ml-5 space-y-2">
+                <li>Lotes con árbol principal de sombra (p. ej., almendro formado).</li>
+                <li>Paletas de materiales naturales y colores monocromáticos.</li>
+                <li>Infraestructura discreta: drenajes verdes, pavimentos permeables.</li>
+              </ul>
+            </div>
+            <div class="p-5 rounded-2xl border border-amber-100 bg-white/60">
+              <div class="font-semibold mb-2">Experiencia</div>
+              <ul class="list-disc ml-5 space-y-2">
+                <li>Tránsito lento, silencioso, con texturas naturales.</li>
+                <li>Iluminación de acento y seguridad no intrusiva.</li>
+                <li>Vistas enmarcadas a vegetación y cielos abiertos.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="mt-8 flex justify-between">
+            <button class="prev pill px-4 py-2 rounded-xl border" data-prev="5"><i class="ph ph-arrow-left"></i> Anterior</button>
+            <button class="next pill px-4 py-2 rounded-xl border" data-next="7">Siguiente <i class="ph ph-arrow-right"></i></button>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 7: VALIDACIÓN / GATE -->
+      <section class="slide hidden" data-slide="7">
+        <div class="soft-card rounded-3xl p-8 md:p-12 slide-enter">
+          <div class="flex items-start gap-4 mb-6">
+            <i class="ph ph-check-circle text-4xl text-green-700"></i>
+            <h2 class="text-2xl md:text-4xl font-extrabold">Fase 7 – Validación & Gate</h2>
+          </div>
+          <p class="text-[var(--muted)] max-w-3xl">Cierre de definición de producto con mesa de actores: técnicos, autoridades, comunidad e inversionistas. Decisión informada: Go / Ajustes / No‑Go, con lista de acciones y responsables.</p>
+          <div class="grid md:grid-cols-3 gap-6 mt-6">
+            <div class="p-5 rounded-2xl border border-amber-100 bg-white/60">
+              <div class="font-semibold mb-2">Criterios de validación</div>
+              <ul class="list-disc ml-5 space-y-2">
+                <li>Compatibilidad normativa confirmada.</li>
+                <li>Gestión pluvial y ambiental integradas.</li>
+                <li>Demanda objetivo y propuesta de valor claras.</li>
+              </ul>
+            </div>
+            <div class="p-5 rounded-2xl border border-amber-100 bg-white/60">
+              <div class="font-semibold mb-2">Entregables</div>
+              <ul class="list-disc ml-5 space-y-2">
+                <li>Memoria de definición de producto.</li>
+                <li>Plano conceptual (lotes, vialidades, azul‑verde).</li>
+                <li>Ficha técnica de vivienda tipo.</li>
+              </ul>
+            </div>
+            <div class="p-5 rounded-2xl border border-amber-100 bg-white/60">
+              <div class="font-semibold mb-2">Próximos pasos</div>
+              <ul class="list-disc ml-5 space-y-2">
+                <li>Ajustes según retroalimentación.</li>
+                <li>Anteproyecto arquitectónico y de urbanización.</li>
+                <li>Calendario de trámites y etapas.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="mt-8 flex justify-between">
+            <button class="prev pill px-4 py-2 rounded-xl border" data-prev="6"><i class="ph ph-arrow-left"></i> Anterior</button>
+            <button class="back pill px-4 py-2 rounded-xl border"><i class="ph ph-house"></i> Portada</button>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="max-w-6xl mx-auto px-4 pb-10 text-sm text-[var(--muted)]">
+    <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-3">
+      <div>Documento de trabajo · look vibrante terroso · v1.0</div>
+      <div class="flex items-center gap-2">
+        <i class="ph ph-map-pin-line"></i> Dos Montes, Villahermosa · <i class="ph ph-tree"></i> Naturaleza y turismo · <i class="ph ph-airplane-tilt"></i> Cercano a aeropuerto
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const slides = [...document.querySelectorAll('.slide')];
+    const navBtns = document.querySelectorAll('.nav-btn');
+    const gotoBtns = document.querySelectorAll('.goto');
+
+    function showSlide(idx){
+      slides.forEach((s,i)=>{ s.classList.toggle('hidden', i!==idx); });
+      navBtns.forEach(btn=>btn.classList.remove('nav-active'));
+      const active = document.querySelector(`.nav-btn[data-target="${idx}"]`);
+      if(active) active.classList.add('nav-active');
+      window.scrollTo({top:0, behavior:'smooth'});
+    }
+
+    navBtns.forEach(btn=> btn.addEventListener('click', ()=> showSlide(+btn.dataset.target)) );
+    gotoBtns.forEach(btn=> btn.addEventListener('click', ()=> showSlide(+btn.dataset.target)) );
+
+    document.querySelectorAll('.next').forEach(b=> b.addEventListener('click', ()=> showSlide(+b.dataset.next)) );
+    document.querySelectorAll('.prev').forEach(b=> b.addEventListener('click', ()=> showSlide(+b.dataset.prev)) );
+    document.querySelectorAll('.back').forEach(b=> b.addEventListener('click', ()=> showSlide(0)) );
+
+    // Descargar HTML actual
+    document.getElementById('dl').addEventListener('click', ()=>{
+      const blob = new Blob([document.documentElement.outerHTML], {type:'text/html;charset=utf-8'});
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = 'Metodologia_DosMontes_presentacion.html';
+      document.body.appendChild(a); a.click(); a.remove();
+      setTimeout(()=>URL.revokeObjectURL(a.href), 1000);
+    });
+  </script>
+</body>
+</html>
