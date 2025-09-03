@@ -227,46 +227,79 @@
         </div>
       </section>
 
-      <!-- SLIDE 4: HIPÓTESIS DE PRODUCTO -->
-      <section class="slide hidden" data-slide="4">
-        <div class="soft-card rounded-3xl p-8 md:p-12 slide-enter">
-          <div class="flex items-start gap-4 mb-6">
-            <i class="ph ph-lightbulb text-4xl text-amber-500"></i>
-            <h2 class="text-2xl md:text-4xl font-extrabold">Fase 4 – Hipótesis de Producto</h2>
-          </div>
-          <p class="text-[var(--muted)] max-w-3xl">Producto campestre contemporáneo: lotes amplios y viviendas de una planta, multigeneracionales, con arquitectura cálida tipo quinta y toques modernos. Enfoque bioclimático, ventilación cruzada y árbol de reunion  (p. ej. almendros).</p>
-          <div class="grid md:grid-cols-3 gap-6 mt-6">
-            <div class="p-5 rounded-2xl border border-amber-100 bg-white/60">
-              <div class="font-semibold mb-2">Lotes</div>
-              <ul class="list-disc ml-5 space-y-2">
-                <li>Rango referencial: 1,700–2,300 m² (ajustable por normativa/viabilidad).</li>
-                <li>Orientación para asoleamiento y vientos predominantes.</li>
-                <li>Reservas verdes y drenaje superficial integrado al paisaje.</li>
-              </ul>
-            </div>
-            <div class="p-5 rounded-2xl border border-amber-100 bg-white/60">
-              <div class="font-semibold mb-2">Vivienda tipo</div>
-              <ul class="list-disc ml-5 space-y-2">
-                <li>1 nivel, 3 recámaras flexibles, espacios integrados interior‑exterior.</li>
-                <li>Materiales naturales (madera tratada, piedra, teja/laminado térmico).</li>
-                <li>Iluminación cálida, arcos u otros acentos locales contemporáneos.</li>
-              </ul>
-            </div>
-            <div class="p-5 rounded-2xl border border-amber-100 bg-white/60">
-              <div class="font-semibold mb-2">Sustentabilidad</div>
-              <ul class="list-disc ml-5 space-y-2">
-                <li>Captación pluvial, compostaje, separación de residuos.</li>
-                <li>Pavimentos permeables y láminas de retardo.</li>
-                <li>Vegetación nativa y estanques/zanjas de infiltración.</li>
-              </ul>
-            </div>
-          </div>
-          <div class="mt-8 flex justify-between">
-            <button class="prev pill px-4 py-2 rounded-xl border" data-prev="3"><i class="ph ph-arrow-left"></i> Anterior</button>
-            <button class="next pill px-4 py-2 rounded-xl border" data-next="5">Siguiente <i class="ph ph-arrow-right"></i></button>
-          </div>
-        </div>
-      </section>
+<!-- SLIDE 4: HIPÓTESIS DE PRODUCTO -->
+<section class="slide hidden" data-slide="4">
+  <div class="soft-card rounded-3xl p-8 md:p-12 slide-enter">
+    <div class="flex items-start gap-4 mb-6">
+      <i class="ph ph-lightbulb text-4xl text-amber-500"></i>
+      <h2 class="text-2xl md:text-4xl font-extrabold">Fase 4 – Hipótesis de Producto</h2>
+    </div>
+    <p class="text-[var(--muted)] max-w-3xl">
+      Producto campestre contemporáneo: lotes amplios y viviendas de una planta,
+      multigeneracionales, con arquitectura cálida tipo quinta y toques modernos.
+      Enfoque bioclimático, ventilación cruzada y sombra de árboles protagónicos (p. ej. almendros).
+    </p>
+
+    <!-- Carrusel de imágenes -->
+    <div class="relative mt-6">
+      <div id="carousel-inner" class="flex transition-transform duration-500">
+        <img src="10.png" class="w-full h-96 object-cover rounded-2xl flex-shrink-0" alt="Referencia 1">
+        <img src="11.png" class="w-full h-96 object-cover rounded-2xl flex-shrink-0" alt="Referencia 2">
+        <img src="12.png" class="w-full h-96 object-cover rounded-2xl flex-shrink-0" alt="Referencia 3">
+        <img src="13.png" class="w-full h-96 object-cover rounded-2xl flex-shrink-0" alt="Referencia 4">
+        <img src="15.png" class="w-full h-96 object-cover rounded-2xl flex-shrink-0" alt="Referencia 5">
+      </div>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6 mt-6">
+      <div class="p-5 rounded-2xl border border-amber-100 bg-white/60">
+        <div class="font-semibold mb-2">Lotes</div>
+        <ul class="list-disc ml-5 space-y-2">
+          <li>Rango referencial: 1,700–2,300 m² (ajustable por normativa/viabilidad).</li>
+          <li>Orientación para asoleamiento y vientos predominantes.</li>
+          <li>Reservas verdes y drenaje superficial integrado al paisaje.</li>
+        </ul>
+      </div>
+      <div class="p-5 rounded-2xl border border-amber-100 bg-white/60">
+        <div class="font-semibold mb-2">Vivienda tipo</div>
+        <ul class="list-disc ml-5 space-y-2">
+          <li>1 nivel, 3 recámaras flexibles, espacios integrados interior-exterior.</li>
+          <li>Materiales naturales (madera tratada, piedra, teja/laminado térmico).</li>
+          <li>Iluminación cálida, arcos u otros acentos locales contemporáneos.</li>
+        </ul>
+      </div>
+      <div class="p-5 rounded-2xl border border-amber-100 bg-white/60">
+        <div class="font-semibold mb-2">Sustentabilidad</div>
+        <ul class="list-disc ml-5 space-y-2">
+          <li>Captación pluvial, compostaje, separación de residuos.</li>
+          <li>Pavimentos permeables y láminas de retardo.</li>
+          <li>Vegetación nativa y estanques/zanjas de infiltración.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-8 flex justify-between">
+      <button class="prev pill px-4 py-2 rounded-xl border" data-prev="3">
+        <i class="ph ph-arrow-left"></i> Anterior
+      </button>
+      <button class="next pill px-4 py-2 rounded-xl border" data-next="5">
+        Siguiente <i class="ph ph-arrow-right"></i>
+      </button>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Carrusel automático
+  const carousel = document.getElementById("carousel-inner");
+  const totalSlides = carousel.children.length;
+  let currentIndex = 0;
+
+  setInterval(() => {
+    currentIndex = (currentIndex + 1) % totalSlides;
+    carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+  }, 3000); // cambia cada 3 segundos
+</script>
 
       <!-- SLIDE 5: VIABILIDAD -->
       <section class="slide hidden" data-slide="5">
